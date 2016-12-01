@@ -7,4 +7,9 @@ import org.l2csl.beginnerjava.restaurant.Ingredient;
  */
 public class Pot extends BaseCookware {
     protected final String COOK_STATE = Ingredient.BOILED;
+
+    @Override
+    public String getName() {
+        return "pot";
+    }
 }

@@ -7,4 +7,9 @@ import org.l2csl.beginnerjava.restaurant.Ingredient;
  */
 public class Tray extends BaseCookware {
     protected final String COOK_STATE = Ingredient.BAKED;
+
+    @Override
+    public String getName() {
+        return "tray";
+    }
 }

@@ -11,5 +11,6 @@ public interface ICookware {
     Ingredient takeIngredient(String name);
     void heat();
     void letCook();
+    String getName();
     IAppliance getLocation();
 }

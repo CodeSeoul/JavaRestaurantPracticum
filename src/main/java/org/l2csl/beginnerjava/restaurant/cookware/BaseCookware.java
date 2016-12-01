@@ -56,4 +56,8 @@ public abstract class BaseCookware implements ICookware {
             ingredient.cook(COOK_STATE);
         }
     }
+
+    public String getName() {
+        return "DO NOT USE";
+    }
 }
