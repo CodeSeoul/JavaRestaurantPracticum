@@ -21,7 +21,7 @@ public class Ingredient {
     private Ingredient(String name, int amount, String state) {
         this.name = name;
         this.amount = amount;
-        this.state = RAW;
+        this.state = state;
     }
 
     public Ingredient takePortion(int portion) {
