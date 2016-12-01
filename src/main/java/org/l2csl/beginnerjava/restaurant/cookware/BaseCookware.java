@@ -15,12 +15,15 @@ public abstract class BaseCookware implements ICookware {
     public static final String HEATING = "heating";
     public static final String HOT = "hot";
 
+    protected final String COOK_STATE = null;
+
     private String state = COLD;
     private final Map<String, Ingredient> contents;
-    private IAppliance location; // null is the Kitchen
+    private IAppliance location;
 
     public BaseCookware() {
         contents = new HashMap<>();
+        location = null; // null is the Kitchen
     }
 
     public void placeIngredient(Ingredient ingredient) {
@@ -32,19 +35,25 @@ public abstract class BaseCookware implements ICookware {
     }
 
     public Ingredient takeIngredient(String name) {
-        // TODO: Remove the ingredient based on its name
-        return null;
+        return contents.remove(name);
     }
 
     public void heat() {
-        // TODO: If cold, change state to heating
-        // TODO: If heating, change state to hot
-        // Hint: Use the static finals
+        if(state.equals(COLD)) {
+            state = HEATING;
+        } else if(state.equals(HEATING)) {
+            state = HOT;
+        }
     }
 
-    // TODO: Create a getter for the cookware's location
+    public IAppliance getLocation() {
+        // null is the kitchen
+        return location;
+    }
 
-    // TODO: Create a method called letCook that returns nothing. If the cookware is hot, it should change all contained ingredients to the appropriate cooked state.
-    // Hint: You can't really change the state here. You should do it in subclasses...
-    // Hint: You can created a protected helper method to make things easier. Your subclasses' methods can just be one-liners.
+    public void letCook() {
+        for(Ingredient ingredient : contents.values()) {
+            ingredient.cook(COOK_STATE);
+        }
+    }
 }
