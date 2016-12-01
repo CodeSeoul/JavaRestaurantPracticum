@@ -1,4 +1,4 @@
-package org.l2csl.java.restaurant;
+package org.l2csl.beginnerjava.restaurant;
 
 /**
  * Created by draco on 11/24/2016.

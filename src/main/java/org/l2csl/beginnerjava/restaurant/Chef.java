@@ -1,9 +1,8 @@
-package org.l2csl.java.restaurant;
+package org.l2csl.beginnerjava.restaurant;
 
-import org.l2csl.java.restaurant.appliance.IAppliance;
-import org.l2csl.java.restaurant.cookware.ICookware;
+import org.l2csl.beginnerjava.restaurant.appliance.IAppliance;
+import org.l2csl.beginnerjava.restaurant.cookware.ICookware;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**

@@ -1,6 +1,6 @@
-package org.l2csl.java.restaurant.appliance;
+package org.l2csl.beginnerjava.restaurant.appliance;
 
-import org.l2csl.java.restaurant.cookware.ICookware;
+import org.l2csl.beginnerjava.restaurant.cookware.ICookware;
 
 /**
  * Created by draco on 11/24/2016.

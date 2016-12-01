@@ -1,10 +1,12 @@
-package org.l2csl.java.restaurant;
+package org.l2csl.beginnerjava.restaurant;
 
-import org.l2csl.java.restaurant.appliance.*;
-import org.l2csl.java.restaurant.cookware.ICookware;
-import org.l2csl.java.restaurant.cookware.Pan;
-import org.l2csl.java.restaurant.cookware.Pot;
-import org.l2csl.java.restaurant.cookware.Tray;
+import org.l2csl.beginnerjava.restaurant.appliance.IAppliance;
+import org.l2csl.beginnerjava.restaurant.appliance.Oven;
+import org.l2csl.beginnerjava.restaurant.appliance.Stove;
+import org.l2csl.beginnerjava.restaurant.cookware.Pan;
+import org.l2csl.beginnerjava.restaurant.cookware.Pot;
+import org.l2csl.beginnerjava.restaurant.cookware.Tray;
+import org.l2csl.beginnerjava.restaurant.cookware.ICookware;
 
 import java.util.HashMap;
 

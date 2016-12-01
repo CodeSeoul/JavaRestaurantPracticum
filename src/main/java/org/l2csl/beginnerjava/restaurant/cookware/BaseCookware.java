@@ -1,7 +1,7 @@
-package org.l2csl.java.restaurant.cookware;
+package org.l2csl.beginnerjava.restaurant.cookware;
 
-import org.l2csl.java.restaurant.Ingredient;
-import org.l2csl.java.restaurant.appliance.IAppliance;
+import org.l2csl.beginnerjava.restaurant.appliance.IAppliance;
+import org.l2csl.beginnerjava.restaurant.Ingredient;
 
 import java.util.ArrayList;
 
