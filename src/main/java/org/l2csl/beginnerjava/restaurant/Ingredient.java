@@ -15,29 +15,42 @@ public class Ingredient {
     private String state;
 
     public Ingredient(String name, int amount) {
+        this(name, amount, RAW);
+    }
+
+    private Ingredient(String name, int amount, String state) {
         this.name = name;
         this.amount = amount;
         this.state = RAW;
     }
 
     public Ingredient takePortion(int portion) {
-        // TODO: Remove the portion from this ingredient's amount. Return a new ingredient of the same name, where the amount is equal to the portion. Remove the return null.
-        return null;
+        this.amount -= portion;
+        return new Ingredient(name, portion);
     }
 
     public void addPortion(int portion) {
-        // TODO: Add the portion to this ingredient's amount
+        this.amount += portion;
     }
 
     public void cook(String state) {
-        // TODO: Change the ingredient's state to the given state
+        this.state = state;
     }
 
-    // TODO: Create getters for name, amount, and state
+    public String getName() {
+        return name;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public String getState() {
+        return state;
+    }
 
     @Override
     public String toString() {
-        // TODO: An ingredient should be represented like "2 of sauteed garlic"
-        return "";
+        return Integer.toString(amount) + " of " + state + " " + name;
     }
 }
