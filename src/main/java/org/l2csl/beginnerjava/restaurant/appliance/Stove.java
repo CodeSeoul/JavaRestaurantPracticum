@@ -18,7 +18,6 @@ public class Stove extends BaseAppliance {
         if(contents.size() == capacity) {
             throw new Exception("Stove at capacity. Cannot add more cookware.");
         }
-        // TODO: What cookware should an oven accept? Throw an exception if the wrong cookware is given
-        // TODO: Is there a capacity on an oven? Enforce it with an exception
+        super.placeCookware(cookware);
     }
 }
