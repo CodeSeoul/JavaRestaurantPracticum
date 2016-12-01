@@ -8,7 +8,7 @@ import org.l2csl.beginnerjava.restaurant.Ingredient;
  */
 public interface ICookware {
     void placeIngredient(Ingredient ingredient);
-    void removeIngredient(String name);
+    Ingredient takeIngredient(String name);
     void heat();
     void letCook();
     IAppliance getLocation();
