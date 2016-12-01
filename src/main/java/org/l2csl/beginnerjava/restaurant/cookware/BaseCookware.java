@@ -24,11 +24,16 @@ public abstract class BaseCookware implements ICookware {
     }
 
     public void placeIngredient(Ingredient ingredient) {
-        // TODO: Place ingredient into ingredients.
+        if(contents.containsKey(ingredient.getName())) {
+            contents.get(ingredient.getName()).addPortion(ingredient.getAmount());
+        } else {
+            contents.put(ingredient.getName(), ingredient);
+        }
     }
 
-    public void removeIngredient(String name) {
+    public Ingredient takeIngredient(String name) {
         // TODO: Remove the ingredient based on its name
+        return null;
     }
 
     public void heat() {
