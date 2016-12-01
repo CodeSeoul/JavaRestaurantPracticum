@@ -10,5 +10,6 @@ public interface ICookware {
     void placeIngredient(Ingredient ingredient);
     void removeIngredient(String name);
     void heat();
+    void letCook();
     IAppliance getLocation();
 }

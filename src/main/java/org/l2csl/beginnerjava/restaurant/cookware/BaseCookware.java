@@ -37,4 +37,8 @@ public abstract class BaseCookware implements ICookware {
     }
 
     // TODO: Create a getter for the cookware's location
+
+    // TODO: Create a method called letCook that returns nothing. If the cookware is hot, it should change all contained ingredients to the appropriate cooked state.
+    // Hint: You can't really change the state here. You should do it in subclasses...
+    // Hint: You can created a protected helper method to make things easier. Your subclasses' methods can just be one-liners.
 }
