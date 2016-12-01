@@ -17,18 +17,14 @@ public abstract class BaseCookware implements ICookware {
 
     private String state = COLD;
     private final Map<String, Ingredient> contents;
-    private IAppliance location; // null is the Kitchen
+    private IAppliance location;
 
     public BaseCookware() {
         contents = new HashMap<>();
+        location = null; // null is the Kitchen
     }
 
     public void placeIngredient(Ingredient ingredient) {
-        if(contents.containsKey(ingredient.getName())) {
-            contents.get(ingredient.getName()).addPortion(ingredient.getAmount());
-        } else {
-            contents.put(ingredient.getName(), ingredient);
-        }
     }
 
     public Ingredient takeIngredient(String name) {
@@ -45,6 +41,5 @@ public abstract class BaseCookware implements ICookware {
     // TODO: Create a getter for the cookware's location
 
     // TODO: Create a method called letCook that returns nothing. If the cookware is hot, it should change all contained ingredients to the appropriate cooked state.
-    // Hint: You can't really change the state here. You should do it in subclasses...
-    // Hint: You can created a protected helper method to make things easier. Your subclasses' methods can just be one-liners.
+    // Hint: You can use a protected property that you can set in subclasses. If you do this, you don't even need to override this. But, if it's easier, just override it in subclasses.
 }
