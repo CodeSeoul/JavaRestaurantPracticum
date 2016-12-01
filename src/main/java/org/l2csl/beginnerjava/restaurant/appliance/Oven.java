@@ -13,9 +13,4 @@ public class Oven extends BaseAppliance {
         // TODO: What cookware should an oven accept? Throw an exception if the wrong cookware is given
         // TODO: Is there a capacity on an oven? Enforce it with an exception
     }
-
-    @Override
-    public void cook() {
-        // TODO: Once you cook the ingredients in an oven, what state do they become? For each ingredient, set it to the proper state
-    }
 }

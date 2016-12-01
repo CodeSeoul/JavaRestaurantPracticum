@@ -12,6 +12,6 @@ public abstract class BaseAppliance implements IAppliance {
     }
 
     @Override
-    public void cook() {
+    public void turnOn() {
     }
 }
