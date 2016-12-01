@@ -7,5 +7,6 @@ import org.l2csl.beginnerjava.restaurant.cookware.ICookware;
  */
 public interface IAppliance {
     void placeCookware(ICookware cookware);
+    ICookware takeCookware(String name);
     void turnOn();
 }

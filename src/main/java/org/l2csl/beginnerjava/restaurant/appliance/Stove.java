@@ -10,5 +10,6 @@ public class Stove extends BaseAppliance {
     public void placeCookware(ICookware cookware) {
         // TODO: What cookware should a stove accept? Throw an exception if the wrong cookware is given
         // TODO: Is there a capacity on an stove? Enforce it with an exception
+        // Hint: Once you have this throw an exception, you'll need to make changes in other classes
     }
 }
