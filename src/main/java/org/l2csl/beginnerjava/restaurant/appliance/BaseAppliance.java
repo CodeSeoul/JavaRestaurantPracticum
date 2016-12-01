@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public abstract class BaseAppliance implements IAppliance {
     protected Map<String, ICookware> contents;
+    protected final int capacity = 0;
 
     public BaseAppliance() {
         contents = new HashMap<>();
@@ -31,4 +32,6 @@ public abstract class BaseAppliance implements IAppliance {
         // TODO: Heat up the cookware
         // Yes, you'll turn on the appliance multiple times. I get a little lazy
     }
+
+    // TODO: Write out the getters for contents and capacity
 }
