@@ -3,7 +3,8 @@ package org.l2csl.beginnerjava.restaurant.cookware;
 import org.l2csl.beginnerjava.restaurant.appliance.IAppliance;
 import org.l2csl.beginnerjava.restaurant.Ingredient;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by draco on 11/24/2016.
@@ -15,15 +16,15 @@ public abstract class BaseCookware implements ICookware {
     public static final String HOT = "hot";
 
     private String state = COLD;
-    private final ArrayList<Ingredient> contents;
+    private final Map<String, Ingredient> contents;
     private IAppliance location; // null is the Kitchen
 
     public BaseCookware() {
-        contents = new ArrayList<>();
+        contents = new HashMap<>();
     }
 
     public void placeIngredient(Ingredient ingredient) {
-        // TODO: Place ingredient into ingredients
+        // TODO: Place ingredient into ingredients.
     }
 
     public void removeIngredient(String name) {
