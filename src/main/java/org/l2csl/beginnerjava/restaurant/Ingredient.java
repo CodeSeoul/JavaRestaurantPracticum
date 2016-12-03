@@ -44,4 +44,20 @@ public class Ingredient {
         // TODO: An ingredient should be represented like "2 of sauteed garlic"
         return "";
     }
+
+    public boolean equals(Object obj) {
+        // TODO: Return true if the name, amount, and state between this ingredient and the given object match.
+        // Hint: You'll need to cast obj to an Ingredient
+        return false;
+    }
+
+    public int hashCode() { // Don't worry about this
+        int hashPrime = 31;
+        int hash = 7;
+        String stringRep = toString();
+        for(int i = 0; i < stringRep.length(); i++) {
+            hash = hash*31 + stringRep.charAt(i);
+        }
+        return hash;
+    }
 }
