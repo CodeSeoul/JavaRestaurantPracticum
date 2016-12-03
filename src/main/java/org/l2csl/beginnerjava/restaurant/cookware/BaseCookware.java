@@ -19,7 +19,7 @@ public abstract class BaseCookware implements ICookware {
 
     private String state = COLD;
     private final Map<String, Ingredient> contents;
-    private IAppliance location;
+    public IAppliance location;
 
     public BaseCookware() {
         contents = new HashMap<>();
@@ -49,6 +49,13 @@ public abstract class BaseCookware implements ICookware {
     public IAppliance getLocation() {
         // null is the kitchen
         return location;
+    }
+
+    public void setLocation(IAppliance location) {
+        if(location != null) {
+            location.takeCookware(getName());
+        }
+        this.location = location;
     }
 
     public void letCook() {

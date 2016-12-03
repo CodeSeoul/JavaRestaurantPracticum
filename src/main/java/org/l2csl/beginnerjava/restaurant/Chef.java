@@ -19,16 +19,31 @@ public class Chef {
     }
 
     public void take(Ingredient ingredient) {
-        // TODO: Add the ingredient to the Chef's ingredients. If the ingredient is already in his possession, add its amount to what he already has. Don't mix up ingredients of different states!
+        Ingredient targetIngredient = ingredients.get(ingredient.getName());
+        if(targetIngredient == null) {
+            ingredients.put(ingredient.getName(), ingredient);
+            return;
+        }
+        if(targetIngredient.getState().equals(ingredient.getState())) {
+            targetIngredient.addPortion(ingredient.getAmount());
+        } else {
+            System.out.println("It's probably a bad idea to mix differently cooked ingredients.");
+        }
     }
 
     public void take(String ingredientName, int amount, String state) {
-        // TODO: Same as take(Ingredient ingredient) but for when you don't have an ingredient instance readily available
+        Ingredient ingredient = new Ingredient(ingredientName, amount, state);
+        take(ingredient);
     }
 
-    public void take(ICookware cookware) {
+    public void take(ICookware cookware) throws Exception {
         // TODO: Throw an exception if the Chef already has cookware
         // TODO: Set the given cookware to the Chef's cookware. Remove it from the current appliance (if applicable)
+        if(this.cookware != null) {
+            throw new Exception("The Chef can't carry two pieces of cookware at once!");
+        }
+        this.cookware = cookware;
+        this.cookware.setLocation(null);
     }
 
     public void put(IAppliance appliance) {

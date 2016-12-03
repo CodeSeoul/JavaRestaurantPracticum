@@ -13,4 +13,5 @@ public interface ICookware {
     void letCook();
     String getName();
     IAppliance getLocation();
+    void setLocation(IAppliance appliance);
 }
