@@ -13,12 +13,15 @@ public class Recipe {
     }
 
     public void printIngredients() {
-        // TODO: Print each ingredient
+        for(Ingredient ingredient : ingredientList) {
+            System.out.println(ingredient.toString());
+        }
     }
 
     public void printDirections() {
-        // TODO: For each value in directions, print the number of the step followed by the step
-        // Make this a low priority. It won't have impact on the rest of your code
+        for(int i = 0; i < directions.length; i++) {
+            System.out.println(Integer.toString(i) + ") " + directions[i]);
+        }
     }
 
     public Ingredient[] getIngredientList() {
