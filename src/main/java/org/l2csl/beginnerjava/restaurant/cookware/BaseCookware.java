@@ -39,6 +39,7 @@ public abstract class BaseCookware implements ICookware {
     }
 
     // TODO: Create a getter for the cookware's location
+    // TODO: Create a setter for the cookware's location. Make sure to remove the cookware from the IAppliance, too
 
     // TODO: Create a method called letCook that returns nothing. If the cookware is hot, it should change all contained ingredients to the appropriate cooked state.
     // Hint: You can use a protected property that you can set in subclasses. If you do this, you don't even need to override this. But, if it's easier, just override it in subclasses.

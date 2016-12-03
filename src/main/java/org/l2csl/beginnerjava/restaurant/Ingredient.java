@@ -18,7 +18,7 @@ public class Ingredient {
         this(name, amount, RAW);
     }
 
-    private Ingredient(String name, int amount, String state) {
+    public Ingredient(String name, int amount, String state) {
         this.name = name;
         this.amount = amount;
         this.state = state;

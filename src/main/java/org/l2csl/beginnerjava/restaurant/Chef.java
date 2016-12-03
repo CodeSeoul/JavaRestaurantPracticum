@@ -28,7 +28,7 @@ public class Chef {
 
     public void take(ICookware cookware) {
         // TODO: Throw an exception if the Chef already has cookware
-        // TODO: Set the given cookware to the Chef's cookware. Remove it from the current appliance (if applicable)
+        // TODO: Set the given cookware to the Chef's cookware
     }
 
     public void put(IAppliance appliance) {
