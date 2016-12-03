@@ -37,8 +37,6 @@ public class Chef {
     }
 
     public void take(ICookware cookware) throws Exception {
-        // TODO: Throw an exception if the Chef already has cookware
-        // TODO: Set the given cookware to the Chef's cookware. Remove it from the current appliance (if applicable)
         if(this.cookware != null) {
             throw new Exception("The Chef can't carry two pieces of cookware at once!");
         }
@@ -47,14 +45,22 @@ public class Chef {
     }
 
     public void put(IAppliance appliance) {
-        // TODO: Put the Chef's current cookware into the appliance
+        try {
+            appliance.placeCookware(cookware);
+        } catch(Exception e) {
+            System.out.println("Couldn't place the cookware into the appliance! Error was: " +
+                e.getMessage());
+            return;
+        }
+        this.cookware = null;
     }
 
-    public void put(String ingredientName, int Amount, String State, ICookware cookware) {
-        // TODO: Put the Chef's ingredient into the cookware. Remove it from the Chef's ingredients.
+    public void put(String ingredientName, int amount, String state, ICookware cookware) {
+        Ingredient ingredient = new Ingredient(ingredientName, amount, state);
+        put(ingredient, cookware);
     }
 
     public void put(Ingredient ingredient, ICookware cookware) {
-        // TODO: Same as put(String ingredientName, int Amount, String State, ICookware cookware)
+        cookware.placeIngredient(ingredient);
     }
 }
