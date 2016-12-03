@@ -53,4 +53,24 @@ public class Ingredient {
     public String toString() {
         return Integer.toString(amount) + " of " + state + " " + name;
     }
+
+    public boolean equals(Object obj) {
+        Ingredient other = (Ingredient)obj;
+        if(name.equals(other.getName()) &&
+                amount == other.getAmount() &&
+                state.equals(other.getState())) {
+            return true;
+        }
+        return false;
+    }
+
+    public int hashCode() { // Don't worry about this
+        int hashPrime = 31;
+        int hash = 7;
+        String stringRep = toString();
+        for(int i = 0; i < stringRep.length(); i++) {
+            hash = hash*hashPrime + stringRep.charAt(i);
+        }
+        return hash;
+    }
 }
