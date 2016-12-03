@@ -27,9 +27,19 @@ public class Dish {
     }
 
     public void prepare() {
-        // TODO: Ensure all of the recipe's ingredients are in the dish. If they are, print that the dish is ready
         for(Ingredient ingredient : recipe.getIngredientList()) {
-                
+            Ingredient targetIngredient = ingredients.get(ingredient.getName());
+            if(targetIngredient == null) {
+                System.out.println("Missing ingredient " + ingredient.getName());
+                return;
+            }
+            if(!targetIngredient.getState().equals(ingredient.getState())) {
+                System.out.println(targetIngredient.getName() +
+                        " is currently " + targetIngredient.getState() +
+                        "but it must be " + ingredient.getState());
+                return;
+            }
         }
+        System.out.println("The " + recipe.getName() + " dish is ready!");
     }
 }

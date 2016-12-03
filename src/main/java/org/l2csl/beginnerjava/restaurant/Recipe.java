@@ -6,8 +6,10 @@ package org.l2csl.beginnerjava.restaurant;
 public class Recipe {
     private final Ingredient[] ingredientList;
     private final String[] directions; // An array of steps
+    private final String name;
 
-    public Recipe(Ingredient[] ingredientList, String[] directions) {
+    public Recipe(String name, Ingredient[] ingredientList, String[] directions) {
+        this.name = name;
         this.ingredientList = ingredientList;
         this.directions = directions;
     }
@@ -31,4 +33,6 @@ public class Recipe {
     public String[] getDirections() {
         return directions;
     }
+
+    public String getName() { return name; }
 }
