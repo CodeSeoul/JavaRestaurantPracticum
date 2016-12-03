@@ -21,5 +21,11 @@ public class Recipe {
         // Make this a low priority. It won't have impact on the rest of your code
     }
 
-    // TODO: Create getters for ingredients and directions
+    public Ingredient[] getIngredientList() {
+        return ingredientList;
+    }
+
+    public String[] getDirections() {
+        return directions;
+    }
 }
