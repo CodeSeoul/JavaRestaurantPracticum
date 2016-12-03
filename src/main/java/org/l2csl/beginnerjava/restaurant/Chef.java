@@ -63,4 +63,8 @@ public class Chef {
     public void put(Ingredient ingredient, ICookware cookware) {
         cookware.placeIngredient(ingredient);
     }
+
+    public Kitchen getKitchen() {
+        return kitchen;
+    }
 }
