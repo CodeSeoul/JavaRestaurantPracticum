@@ -56,7 +56,7 @@ public class Ingredient {
         int hash = 7;
         String stringRep = toString();
         for(int i = 0; i < stringRep.length(); i++) {
-            hash = hash*31 + stringRep.charAt(i);
+            hash = hash*hashPrime + stringRep.charAt(i);
         }
         return hash;
     }
