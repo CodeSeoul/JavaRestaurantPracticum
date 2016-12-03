@@ -12,4 +12,8 @@ public class Tray extends BaseCookware {
     public String getName() {
         return "tray";
     }
+
+    public String getCookState() {
+        return COOK_STATE;
+    }
 }

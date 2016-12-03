@@ -40,10 +40,21 @@ public class Main {
         chef.take(ingredientStore.take("rice", 1));
         chef.take(ingredientStore.take("seaweed", 3));
 
-        chef.take(cookware.get("pot"));
-        chef.put("rice", 1,
-                Ingredient.RAW, cookware.get("pot"));
+        Ingredient rice = ingredientStore.take("rice", 1);
+        Ingredient seaweed = ingredientStore.take("seaweed", 3);
 
+        ICookware pot = cookware.get("pot");
+        pot.placeIngredient(rice);
+        appliances.get("stove").placeCookware(pot);
+        appliances.get("stove").turnOn();
+        appliances.get("stove").turnOn();
+        pot.letCook();
+        pot.takeIngredient("rice");
+
+        Dish bibimbapDish = new Dish(bibimbapRecipe);
+        bibimbapDish.addIngredient(rice);
+        bibimbapDish.addIngredient(seaweed);
+        bibimbapDish.prepare();
 
 
         Recipe lasagnaRecipe = new Recipe(

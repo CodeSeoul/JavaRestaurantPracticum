@@ -41,8 +41,10 @@ public abstract class BaseCookware implements ICookware {
     public void heat() {
         if(state.equals(COLD)) {
             state = HEATING;
+            System.out.println("The " + getName() + " is now HEATING");
         } else if(state.equals(HEATING)) {
             state = HOT;
+            System.out.println("The " + getName() + " is now HOT");
         }
     }
 
@@ -60,11 +62,14 @@ public abstract class BaseCookware implements ICookware {
 
     public void letCook() {
         for(Ingredient ingredient : contents.values()) {
-            ingredient.cook(COOK_STATE);
+            ingredient.cook(getCookState());
+            System.out.println(ingredient.getName() + " is now " + COOK_STATE);
         }
     }
 
     public String getName() {
         return "DO NOT USE";
     }
+
+    protected abstract String getCookState();
 }

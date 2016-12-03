@@ -12,4 +12,8 @@ public class Pot extends BaseCookware {
     public String getName() {
         return "pot";
     }
+
+    public String getCookState() {
+        return COOK_STATE;
+    }
 }

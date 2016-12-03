@@ -12,4 +12,6 @@ public class Pan extends BaseCookware {
     public String getName() {
         return "pan";
     }
+
+    public String getCookState() { return COOK_STATE; }
 }

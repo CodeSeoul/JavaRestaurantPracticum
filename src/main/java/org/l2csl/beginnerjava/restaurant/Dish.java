@@ -36,7 +36,7 @@ public class Dish {
             if(!targetIngredient.getState().equals(ingredient.getState())) {
                 System.out.println(targetIngredient.getName() +
                         " is currently " + targetIngredient.getState() +
-                        "but it must be " + ingredient.getState());
+                        " but it must be " + ingredient.getState());
                 return;
             }
         }
