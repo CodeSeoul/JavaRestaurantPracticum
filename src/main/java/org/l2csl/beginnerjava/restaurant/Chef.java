@@ -35,7 +35,7 @@ public class Chef {
         // TODO: Put the Chef's current cookware into the appliance
     }
 
-    public void put(String ingredientName, int Amount, String State, ICookware cookware) {
+    public void put(String ingredientName, int amount, String state, ICookware cookware) {
         // TODO: Put the Chef's ingredient into the cookware. Remove it from the Chef's ingredients.
     }
 
