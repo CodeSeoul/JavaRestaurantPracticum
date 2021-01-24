@@ -1,20 +1,28 @@
 package org.l2csl.beginnerjava.restaurant;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by draco on 11/24/2016.
  */
 public class Dish {
     private final Recipe recipe;
-    private ArrayList<Ingredient> ingredients;
+    private Map<String, Ingredient> ingredients;
 
     public Dish(Recipe recipe) {
         this.recipe = recipe;
+        this.ingredients = new HashMap<>();
     }
 
     public void addIngredient(Ingredient ingredient) {
-        // TODO: Add the ingredient to the list of ingredients. If the ingredient already exists in the list, just add the amount to the existing ingredient in the list.
+        if(ingredients.containsKey(ingredient.getName())) {
+            ingredients.get(
+                    ingredient.getName()
+            ).addPortion(ingredient.getAmount());
+        } else {
+            ingredients.put(ingredient.getName(), ingredient);
+        }
     }
 
     public void prepare() {
