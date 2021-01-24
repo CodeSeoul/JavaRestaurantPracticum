@@ -8,7 +8,7 @@ import java.util.Map;
  * Created by draco on 11/24/2016.
  */
 public interface IAppliance {
-    void placeCookware(ICookware cookware);
+    void placeCookware(ICookware cookware) throws Exception;
     ICookware takeCookware(String name);
     Map<String, ICookware> getContents();
     int getCapacity();

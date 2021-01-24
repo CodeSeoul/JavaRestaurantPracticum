@@ -8,10 +8,9 @@ import org.l2csl.beginnerjava.restaurant.cookware.ICookware;
 public class Oven extends BaseAppliance {
 
     @Override
-    public void placeCookware(ICookware cookware) {
+    public void placeCookware(ICookware cookware) throws Exception {
         // TODO: What cookware should an oven accept? Throw an exception if the wrong cookware is given
         // TODO: Is there a capacity on an oven? Enforce it with an exception
         // TODO: After the above, call the superclass's placeCookware function
-        // Hint: Once you have this throw an exception, you'll need to make changes in other classes
     }
 }

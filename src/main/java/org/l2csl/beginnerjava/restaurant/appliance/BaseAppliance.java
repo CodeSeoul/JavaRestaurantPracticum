@@ -17,7 +17,7 @@ public abstract class BaseAppliance implements IAppliance {
     }
 
     @Override
-    public void placeCookware(ICookware cookware) {
+    public void placeCookware(ICookware cookware) throws Exception {
         // TODO: Place the cookware in this appliance's contents map using the cookware's name as the key
     }
 

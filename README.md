@@ -8,6 +8,9 @@ Recommended class order:
 * [Ingredient](./src/main/java/org/l2csl/beginnerjava/restaurant/Ingredient.java)
 * [Recipe](./src/main/java/org/l2csl/beginnerjava/restaurant/Recipe.java)
 * [Dish](./src/main/java/org/l2csl/beginnerjava/restaurant/Dish.java)
+* [BaseAppliance](./src/main/java/org/l2csl/beginnerjava/restaurant/appliance/BaseAppliance.java)
+* [Oven](./src/main/java/org/l2csl/beginnerjava/restaurant/appliance/Oven.java)
+* [Stove](./src/main/java/org/l2csl/beginnerjava/restaurant/appliance/Stove.java)
 
 You may also want to add print statements throughout so you can see what's happening.
 
