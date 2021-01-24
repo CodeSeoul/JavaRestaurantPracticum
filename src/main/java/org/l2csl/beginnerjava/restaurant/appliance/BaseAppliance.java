@@ -18,7 +18,8 @@ public abstract class BaseAppliance implements IAppliance {
 
     @Override
     public void placeCookware(ICookware cookware) {
-        // TODO: Place the cookware in this appliance
+        // TODO: Check if the number of values in the contents map is greater than or equal to the capacity. If so, throw an error. We cannot add more cookware.
+        // TODO: Place the cookware in this appliance's contents map using the cookware's name as the key
     }
 
     @Override
@@ -29,8 +30,7 @@ public abstract class BaseAppliance implements IAppliance {
 
     @Override
     public void turnOn() {
-        // TODO: Heat up the cookware
-        // Yes, you'll turn on the appliance multiple times. I get a little lazy
+        // TODO: On each cookware value in the contents map, call the cookware's heat method
     }
 
     // TODO: Write out the getters for contents and capacity
