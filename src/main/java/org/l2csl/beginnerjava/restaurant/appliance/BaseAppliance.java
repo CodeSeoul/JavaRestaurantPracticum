@@ -18,7 +18,6 @@ public abstract class BaseAppliance implements IAppliance {
 
     @Override
     public void placeCookware(ICookware cookware) {
-        // TODO: Check if the number of values in the contents map is greater than or equal to the capacity. If so, throw an error. We cannot add more cookware.
         // TODO: Place the cookware in this appliance's contents map using the cookware's name as the key
     }
 
