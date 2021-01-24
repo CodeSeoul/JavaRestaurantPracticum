@@ -12,4 +12,5 @@ public interface ICookware {
     void heat();
     void letCook();
     IAppliance getLocation();
+
 }
