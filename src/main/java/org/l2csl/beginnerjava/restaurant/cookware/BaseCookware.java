@@ -61,9 +61,13 @@ public abstract class BaseCookware implements ICookware {
     }
 
     public void letCook() {
-        for(Ingredient ingredient : contents.values()) {
-            ingredient.cook(getCookState());
-            System.out.println(ingredient.getName() + " is now " + COOK_STATE);
+        if(state.equals(HOT)) {
+            for (Ingredient ingredient : contents.values()) {
+                ingredient.cook(getCookState());
+                System.out.println(ingredient.getName() + " is now " + getCookState());
+            }
+        } else {
+            System.out.println("Cookware is not hot yet. Please heat it more.");
         }
     }
 
