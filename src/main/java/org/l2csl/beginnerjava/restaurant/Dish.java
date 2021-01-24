@@ -14,7 +14,7 @@ public class Dish {
     }
 
     public void addIngredient(Ingredient ingredient) {
-        // TODO: Add the ingredient to the list of ingredients. If the ingredient already exists, just add the amount to the existing ingredient.
+        // TODO: Add the ingredient to the list of ingredients. If the ingredient already exists in the list, just add the amount to the existing ingredient in the list.
     }
 
     public void prepare() {
