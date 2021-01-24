@@ -26,6 +26,8 @@ public class Dish {
     }
 
     public void prepare() {
-        // TODO: Ensure all of the recipe's ingredients are in the dish. If they are, print that the dish is ready
+        // TODO: For each ingredient in the recipe, check if that ingredient is in the dish
+        // TODO: If an ingredient from the recipe is not in the dish, print that an ingredient is missing and return
+        // TODO: If all of the recipe ingredients have been looped through without ending early, print that the dish is ready
     }
 }
