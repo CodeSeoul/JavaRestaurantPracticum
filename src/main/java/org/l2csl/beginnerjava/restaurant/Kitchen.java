@@ -39,4 +39,14 @@ public class Kitchen {
         }
         return instance;
     }
+
+    public IngredientStore getIngredientStore() { return ingredientStore; }
+
+    public HashMap<String, IAppliance> getAppliances() {
+        return appliances;
+    }
+
+    public HashMap<String, ICookware> getCookware() {
+        return cookware;
+    }
 }
